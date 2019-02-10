@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Fencing Academy of Philadelphia">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Jianbin Zhang (Ken)">
+    <title>Home Page</title>
+    <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/footer-distributed.css" type="text/css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+
+    <script src="javascript/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="javascript/bootstrap.min.js" type="text/javascript"></script>
+    <script src="javascript/sticky-kit.min.js"></script>
+
+
+    <!--    font goes here    -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+    <script>
+        $(document).ready(function () {
+            
+            
+            $("#nav-bar").stick_in_parent()
+                .on("sticky_kit:stick", function (e) {
+                    var toBeChanged = document.getElementById("nav-bar");
+                    toBeChanged.style.paddingTop = "20px";
+                })
+                .on("sticky_kit:unstick", function (e) {});
+
+            $('nav li').hover(
+                function () {
+                    $('ul', this).stop().slideDown(200);
+                },
+                function () {
+                    $('ul', this).stop().slideUp(200);
+                }
+            );
+
+            $('#smallnav').on('change', function () {
+                var url = $(this).val(); // get selected value
+                if (url) { // require a URL
+                    window.location = url; // redirect
+                }
+                return false;
+            });
+            
+
+            $('body').scrollspy({
+                target: '.bs-docs-sidebar',
+                offset: 40
+            });
+        
+
+            $(function () {
+                $('a[href*="#"]:not([href="#"])').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+
+
+            //            // Map for FAP-Central
+            //            var fap_central_map;
+            //            var fap_central_lat = 39.960783;
+            //            var fap_central_lng = -75.199582;
+            //            var latlng_fap_central = new google.maps.LatLng(39.960783, -75.199582);
+            //
+            //            function initialize_map() {
+            //                var mapOptions = {
+            //                    zoom: 17,
+            //                    center: new google.maps.LatLng(fap_central_lat, fap_central_lng)
+            //                };
+            //                fap_central_map = new google.maps.Map(document.getElementById('FAP-Central-Map'),
+            //                    mapOptions);
+            //
+            //                var fap_central_marker = new google.maps.Marker({
+            //                    position: latlng_fap_central,
+            //                    map: fap_central_map,
+            //                    title: 'FAP-Central'
+            //                });
+            //
+            //                var fap_central_info = "<strong>Fencing Academy of Philadelphia - Central</strong><br/>" +
+            //                    "<a href='#'>About</a>";
+            //
+            //                var fap_central_infowindow = new google.maps.InfoWindow({
+            //                    content: fap_central_info
+            //                });
+            //
+            //                google.maps.event.addListener(fap_central_marker, 'click', function () {
+            //                    fap_central_infowindow.open(fap_central_map, fap_central_marker);
+            //                });
+            //            }
+            //            google.maps.event.addDomListener(window, 'load', initialize_map);
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="header-container">
+            <a href="index.html"><img id="bg_image" alt="The bacground picture of the header" title="Fencing Academy of Philadelphia" src="img/background.jpg" /></a>
+            <nav>
+                <div class="container" id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">What is Fencing?</a>
+                            <ul>
+                                <li><a href="#">Foil</a></li>
+                                <li><a href="#">Epee</a></li>
+                                <li><a href="#">Saber</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Our Programs</a>
+                            <ul>
+                                <li><a href="#">Fencing Classes</a></li>
+                                <li><a href="#">Training Camps</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Memberships</a>
+                            <ul>
+                                <li><a href="#">Beginner</a></li>
+                                <li><a href="#">Intermediate</a></li>
+                                <li><a href="#">Advanced</a></li>
+                                <li><a href="#">Competitive</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Our Staff</a>
+                            <ul>
+                                <li><a href="#">Maestro</a></li>
+                                <li><a href="#">Moniteur</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Maps&Directions.html" class="focus">Maps &#38; Direction</a>
+                            <ul>
+                                <li><a href="Maps&Directions.html#FAP-Central">FAP Central</a></li>
+                                <li><a href="Maps&Directions.html#FAP-North">FAP North</a></li>
+                                <li><a href="Maps&Directions.html#FAP-Satellite-Programs">Satellite Programs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="ContactUs.html">Contact Us &#38; Register</a>
+                            <ul>
+                                <li><a href="ContactUs.html#registrationform">Register Now</a></li>
+                                <li><a href="ContactUs.html#subscriptionform">More Info</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <select id='smallnav'>
+                <option>--- Main Menu ---</option>
+                <option value="index.html">Home</option>
+                <option value="#">What is Fencing?</option>
+                <option value="#">- Foil</option>
+                <option value="#">- Epee</option>
+                <option value="#">- saber</option>
+                <option value="#">Our Programs</option>
+                <option value="#">- Fencing Classes</option>
+                <option value="#">- Training Classes</option>
+                <option value="#">Memverships</option>
+                <option value="#">- Beginner</option>
+                <option value="#">- Intermediate</option>
+                <option value="#">- Advanced</option>
+                <option value="#">- Competitive</option>
+                <option value="#">Our Staff</option>
+                <option value="#">- Maestro</option>
+                <option value="#">- Moniteur</option>
+                <option value="Maps&Directions.html" selected="selected">Maps &#38; Direction</option>
+                <option value="Maps&Directions.html#FAP-Central">- FAP Central</option>
+                <option value="Maps&Directions.html#FAP-North">- FAP North</option>
+                <option value="Maps&Directions.html#FAP-Satellite-Programs">- Satellite Programs</option>
+                <option value="ContactUs.html">Contact Us &#38; Register</option>
+                <option value="ContactUs.html#registrationform">- Register Now</option>
+                <option value="ContactUs.html#subscriptionform">- More Info</option>
+            </select>
+
+        </div>
+    </header>
+
+    
+    
+    <div class="container">
+        <div class="col-xs-9 map"  id="notFoundStatement">
+            <h3>Page Not Found</h3>
+            <p>Apologies. The page you are looking for could not be found. Please enter a valid url.</p>
+            <img src="img/not_found.jpg" alt="Keep Calm and Parry On" title="Keep Calm and Parry On">
+        </div>
+        <nav class="col-xs-3 bs-docs-sidebar" id="nav-bar">
+            <ul id="sidebar" class="nav nav-stacked fixed">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">What is Fencing?</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#">Foil</a></li>
+                        <li><a href="#">Epee</a></li>
+                        <li><a href="#">Saber</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Our Programs</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#">Fencing Classes</a></li>
+                        <li><a href="#">Training Camps</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Memberships</a>
+                    <ul class="nav nav-stacked">
+                                <li><a href="#">Beginner</a></li>
+                                <li><a href="#">Intermediate</a></li>
+                                <li><a href="#">Advanced</a></li>
+                                <li><a href="#">Competitive</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Our Staff</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#">Maestro</a></li>
+                        <li><a href="#">Moniteur</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="Maps&Directions.html">Maps &#38; Direction</a>
+                    <ul  class="nav nav-stacked" id="focustab">
+                        <li><a href="#FAP-Central">FAP Central</a></li>
+                        <li><a href="#FAP-North">FAP North</a></li>
+                        <li><a href="#FAP-Satellite-Programs">Satellite Programs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ContactUs.html">Contact Us &#38; Register</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="ContactUs.html#registrationform">Register Now</a></li>
+                        <li><a href="ContactUs.html#subscriptionform">More Info</a></li>
+                    </ul>
+                </li>
+                <li><a href="#header-container" id="backToTop">Back To Top</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <footer class="footer-distributed">
+
+            <div class="footer-right">
+                <a href="mailto:fencefap@hotmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/Fencing-Academy-of-Philadelphia-Inc-144204909089863/" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.usfencing.org/" title="USA Fencing"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <a href="https://www.askfred.net/" title="AskFred - Database holding American fencing registration details and results"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a href="index.html">Home</a> ·
+                    <a href="#">Fencing</a> ·
+                    <a href="#">Programs</a> ·
+                    <a href="#">Memberships</a> ·
+                    <a href="#">Staff</a> ·
+                    <a href="Maps&Directions.html">Maps</a> ·
+                    <a href="ContactUs.html">Contanct Us</a>
+
+                </p>
+
+                <a href="index.html"><p>Fencing Academy of Philadelphia</p></a>
+            </div>
+
+        </footer>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Fencing Academy of Philadelphia offers classes for adults and children, from beginners to world champions, ages 8 to 80 years old. Private lessons and open bouting also provided.">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Jianbin Zhang (Ken)">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Fencing Academy of Philadelphia</title>
+    
+    <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexslider/2.6.1/flexslider.css" integrity="sha256-XH6s8w3lKboz42UH+lSgbbeVVJtIoWMTKB4LfvUPy40=" crossorigin="anonymous">
+    <link href="css/footer-distributed.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/flexslider/2.6.1/jquery.flexslider-min.js" integrity="sha256-5WsIWQuT7aIFEdqiv6koECFZ45bxD1X0rn6SmPblqdU=" crossorigin="anonymous"></script>
+
+
+    <!--    font goes here    -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+    <script>
+        $(document).ready(function () {
+
+            $('nav li').hover(
+                function () {
+                    $('ul', this).stop().slideDown(200);
+                },
+                function () {
+                    $('ul', this).stop().slideUp(200);
+                }
+            );
+
+            $('.flexslider').flexslider({
+                animation: "slide",
+                directionNav: true,
+                pauseOnHover: true,
+                smoothHeight: true
+            });
+
+            $('#smallnav').on('change', function () {
+                var url = $(this).val(); // get selected value
+                if (url) { // require a URL
+                    window.location = url; // redirect
+                }
+                return false;
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="header-container">
+            <a href="index.html"><img id="bg_image" alt="The bacground picture of the header" title="Fencing Academy of Philadelphia" src="img/background.jpg" /></a>
+            <nav>
+                <div class="container" id="nav">
+                    <ul>
+                        <li><a href="index.html" class="focus">Home</a></li>
+                        <li><a href="#">What is Fencing?</a>
+                            <ul>
+                                <li><a href="#">Foil</a></li>
+                                <li><a href="#">Epee</a></li>
+                                <li><a href="#">Saber</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Our Programs</a>
+                            <ul>
+                                <li><a href="#">Fencing Classes</a></li>
+                                <li><a href="#">Training Camps</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Memberships</a>
+                            <ul>
+                                <li><a href="#">Beginner</a></li>
+                                <li><a href="#">Intermediate</a></li>
+                                <li><a href="#">Advanced</a></li>
+                                <li><a href="#">Competitive</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Our Staff</a>
+                            <ul>
+                                <li><a href="#">Maestro</a></li>
+                                <li><a href="#">Moniteur</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Maps&Directions.html">Maps &#38; Direction</a>
+                            <ul>
+                                <li><a href="Maps&Directions.html#FAP-Central">FAP Central</a></li>
+                                <li><a href="Maps&Directions.html#FAP-North">FAP North</a></li>
+                                <li><a href="Maps&Directions.html#FAP-Satellite-Programs">Satellite Programs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="ContactUs.html">Registration &#38; Subscription</a>
+                            <ul>
+                                <li><a href="ContactUs.html#registrationform">Register Now</a></li>
+                                <li><a href="ContactUs.html#subscriptionform">More Info</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <select id='smallnav'>
+                <option>--- Main Menu ---</option>
+                <option value="index.html" selected="selected">Home</option>
+                <option value="#">What is Fencing?</option>
+                <option value="#">- Foil</option>
+                <option value="#">- Epee</option>
+                <option value="#">- saber</option>
+                <option value="#">Our Programs</option>
+                <option value="#">- Fencing Classes</option>
+                <option value="#">- Training Classes</option>
+                <option value="#">Memverships</option>
+                <option value="#">- Beginner</option>
+                <option value="#">- Intermediate</option>
+                <option value="#">- Advanced</option>
+                <option value="#">- Competitive</option>
+                <option value="#">Our Staff</option>
+                <option value="#">- Maestro</option>
+                <option value="#">- Moniteur</option>
+                <option value="Maps&Directions.html">Maps &#38; Direction</option>
+                <option value="Maps&Directions.html#FAP-Central">- FAP Central</option>
+                <option value="Maps&Directions.html#FAP-North">- FAP North</option>
+                <option value="Maps&Directions.html#FAP-Satellite-Programs">- Satellite Programs</option>
+                <option value="ContactUs.html">Registration &#38; Subscription</option>
+                <option value="ContactUs.html#registrationform">- Register Now</option>
+                <option value="ContactUs.html#subscriptionform">- More Info</option>
+            </select>
+
+        </div>
+    </header>
+
+
+
+
+    <div class="slider_container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <a href="#"><img src="img/FAP_Central.jpg" alt="FAP central image" title="FAP Central" /></a>
+                    <p class="flex-caption">FAP Central has 10 strips. Featuring SportCourt athletic flooring and an urban chic vibe, the class training room is situated in the front adjacent to to the waiting area and the weight room, the bouting room is found in the back with overhead reels and signature FAP colors.</p>
+                </li>
+                <li>
+                    <a href="#"><img src="img/FAP_North.jpg" alt="FAP north image" title="FAP North" /></a>
+                    <p class="flex-caption">FAP North has 14 strips, 10 electric strips with overhead systems, a weight room, study room, pro-shop, armoury, changing rooms and a member lounge. The class training area has 8 foot mirrors to facilitate learning. The floor is a custom sport floor installed by Snapcourt and is an excellent, high traction, cushioned surface for fencing and training on. </p>
+                </li>
+                <li>
+                    <a href="#"><img src="img/Satellite_Program.jpg" alt="FAP satellite program picture" title="FAP Satellite Programs" /></a>
+                    <p class="flex-caption">Satellite Programs are located in the Philadelphia and Main Line areas. This picture shows our Master training athletes at one of our satellite locations at Bryn Mawr, PA.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+    </div>
+
+    <div class="container" id="tabContainer">
+        <div class="col-md-4 col-sm-6" id="column-left">
+            <a href="#">
+                <img class="hvr-grow-shadow" src="img/Maestro_sm.jpg" alt="Picture of Maestro of Fencing Academy of Philadelphia">
+                <h3>Maitre d' Armes Mark L. Masters</h3>
+            </a>
+            <p>The Owner and Head Coach of Fencing Academy of Philadelphia</p>
+        </div>
+        <div class="col-md-4 col-sm-6 " id="column-middle">
+            <a href="ContactUs.html">
+                <img class="hvr-grow-shadow" src="img/sign_up_picture.jpg" alt="register logo">
+                <h3>Register Now</h3>
+            </a>
+            <P>Register now and enjoy the fun of fencing!
+                <br/> Subscribe for more information about us! </P>
+        </div>
+        <div class="col-md-4 col-sm-6" id="column-right">
+            <a href="Maps&Directions.html">
+                <img class="hvr-grow-shadow" src="img/Map.jpg" alt="Picture of the Map of Fencing Academy of Philadelphia">
+                <h3>Fencing Academy of Philadelphia</h3>
+            </a>
+            <P>F.A.P.- Central 3851 Warren Ave Phila PA 19104 215-382-0293 fencefap@hotmail.com hrs: M-Th 4-10pm, Sat 8:30am-4pm</P>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+
+        <footer class="footer-distributed">
+
+            <div class="footer-right">
+                <a href="mailto:fencefap@hotmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/Fencing-Academy-of-Philadelphia-Inc-144204909089863/" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.usfencing.org/" title="USA Fencing"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <a href="https://www.askfred.net/" title="AskFred - Database holding American fencing registration details and results"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a href="index.html">Home</a> ·
+                    <a href="#">Fencing</a> ·
+                    <a href="#">Programs</a> ·
+                    <a href="#">Memberships</a> ·
+                    <a href="#">Staff</a> ·
+                    <a href="Maps&Directions.html">Maps</a> ·
+                    <a href="ContactUs.html">Registration</a>
+
+                </p>
+
+                <a href="index.html">
+                    <p>Fencing Academy of Philadelphia</p>
+                </a>
+            </div>
+
+        </footer>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+# here is my redirect
+Redirect 302 /~jzhang/myfavoritebook https://www.amazon.com/Three-Body-Problem-Cixin-Liu/dp/0765382032/ref=sr_1_1?ie=UTF8&qid=1469579438&sr=8-1&keywords=three+body+problem+cixin+liu
+
+# set up caches
+
+ExpiresActive On
+ExpiresByType image/png A604800
+ExpiresByType image/gif A604800
+ExpiresByType image/jpeg A604800
+ExpiresByType text/css A604800
+ExpiresByType text/javascript A604800
+
+# set up compression
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/javascript
+
+# set up 404 error page
+ErrorDocument 404 /~jzhang/error/status404.html

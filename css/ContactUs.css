@@ -1,0 +1,44 @@
+.col-xs-9{
+    background-color: #FFFFFF;
+}
+
+#registrationform{
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#subscriptionform{
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#focustab{
+    display: inline !important;
+}
+
+legend{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#fillOutForm{
+    text-align: center;
+    font-size: large;
+/*    font-weight: bold;*/
+    padding-top: 5px;
+}
+#fillOutForm a{
+    font-weight: bold;
+}
+
+.col-md-4 {
+    margin-top: 0;
+}
+
+label.error {
+    color: red;
+    margin-left: .1em;
+    font-style: italic;
+}
